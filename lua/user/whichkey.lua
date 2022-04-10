@@ -79,16 +79,14 @@ local opts = {
 }
 
 local mappings = {
-  ["Q"] = { "<cmd>q!<CR>", "Quit" },
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-  ["b"] = {
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Buffers",
-  },
+  
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["Q"] = { "<cmd>q!<CR>", "Quit" },
+
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Find files",
@@ -181,6 +179,18 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+  b = {
+    name = "Buffer",
+    b = {
+    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    "Buffers",
+    },
+    h = { "<cmd>BufferLineMovePrev<cr>", "Move Prev" },
+    l = { "<cmd>BufferLineMoveNext<cr>", "Move Next" },
+
+  }
+
 }
 
 which_key.setup(setup)
