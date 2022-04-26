@@ -188,6 +188,8 @@ local mappings = {
     },
     h = { "<cmd>BufferLineMovePrev<cr>", "Move Prev" },
     l = { "<cmd>BufferLineMoveNext<cr>", "Move Next" },
+    C = { "<cmd>%bd|e#|bd#<cr>", "Close Others But this" },
+
 
   }
 
