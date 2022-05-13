@@ -95,9 +95,16 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 	use("JoosepAlviste/nvim-ts-context-commentstring")
+	use("nvim-treesitter/nvim-treesitter-refactor")
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
+
+	-- CSS Colorizer
+	use("norcalli/nvim-colorizer.lua")
+
+	-- Multiple Cursors Support
+	use("mg979/vim-visual-multi")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
