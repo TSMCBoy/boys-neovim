@@ -1,7 +1,6 @@
-vim.g.material_style = "deep ocean"
 vim.cmd([[
 try
-  colorscheme material 
+  colorscheme catppuccin
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
